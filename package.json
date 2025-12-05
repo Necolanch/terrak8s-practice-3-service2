@@ -21,5 +21,8 @@
   "homepage": "https://github.com/Necolanch/terrak8s-practice-3-service2#readme",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
   }
 }
