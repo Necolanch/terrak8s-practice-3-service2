@@ -12,6 +12,16 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/callService1', async (req, res) => {
+  try {
+    const response = await fetch('http://terrak8s-practice-3-service1-clusterip:80/');
+    const data = await response.json();
+    res.json({fetchedData: data});
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+});
+
 app.listen(port, () => {
   console.log(`Service B running on port ${port}`);
 });
